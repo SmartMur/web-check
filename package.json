@@ -65,7 +65,7 @@
     "@astrojs/sitemap": "^3.1.4",
     "@astrojs/svelte": "^5.4.0",
     "@astrojs/ts-plugin": "^1.6.1",
-    "@astrojs/vercel": "^7.5.4",
+    "@astrojs/vercel": "^10.0.2",
     "concurrently": "^8.2.2",
     "nodemon": "^3.1.0",
     "sass": "^1.77.1"
