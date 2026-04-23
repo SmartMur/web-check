@@ -58,7 +58,7 @@
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^10.2.5",
+    "@astrojs/cloudflare": "^13.1.10",
     "@astrojs/netlify": "^5.2.0",
     "@astrojs/node": "^8.2.5",
     "@astrojs/partytown": "^2.1.0",
