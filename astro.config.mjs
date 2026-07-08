@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import { loadEnv } from 'vite';
 
 // Integrations
 import svelte from '@astrojs/svelte';
@@ -7,23 +8,26 @@ import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
 
 // Adapters
-import vercelAdapter from '@astrojs/vercel/serverless';
+import vercelAdapter from '@astrojs/vercel';
 import netlifyAdapter from '@astrojs/netlify';
 import nodeAdapter from '@astrojs/node';
 import cloudflareAdapter from '@astrojs/cloudflare';
 
-// Helper function to unwrap both Vite and Node environment variables
+const env = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
+
+// Helper function to unwrap both loaded and Node environment variables
 const unwrapEnvVar = (varName, fallbackValue) => {
   const classicEnvVar = process?.env && process.env[varName];
-  const viteEnvVar = import.meta.env[varName];
-  return classicEnvVar || viteEnvVar || fallbackValue;
+  const loadedEnvVar = env[varName];
+  return classicEnvVar || loadedEnvVar || fallbackValue;
 }
 
 // Determine the deploy target (vercel, netlify, cloudflare, node)
 const deployTarget = unwrapEnvVar('PLATFORM', 'node').toLowerCase();
 
-// Determine the output mode (server, hybrid or static)
-const output = unwrapEnvVar('OUTPUT', 'hybrid');
+// Determine the output mode. Astro 5 folded the old "hybrid" mode into "static".
+const configuredOutput = unwrapEnvVar('OUTPUT', 'static');
+const output = configuredOutput === 'hybrid' ? 'static' : configuredOutput;
 
 // The FQDN of where the site is hosted (used for sitemaps & canonical URLs)
 const site = unwrapEnvVar('SITE_URL', 'https://web-check.xyz');
@@ -76,4 +80,3 @@ if (!isBossServer && isBossServer !== true) {
 
 // Export Astro configuration
 export default defineConfig({ output, base, integrations, site, adapter, redirects });
-

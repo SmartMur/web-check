@@ -24,7 +24,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 16
+        node-version: 22.12.0
 
     - name: Cache node_modules
       uses: actions/cache@v4
@@ -73,7 +73,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 16
+        node-version: 22.12.0
     
     - name: Cache node_modules
       uses: actions/cache@v4
@@ -125,4 +125,3 @@ jobs:
         state: "${{ job.status }}"
         deployment_id: ${{ steps.deployment_frontend.outputs.deployment_id }}
         ref: ${{ github.ref }}
-

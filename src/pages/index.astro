@@ -6,9 +6,11 @@ import HomeBackground from '@/components/homepage/HomeBackground';
 import AboutSection from '@/components/homepage/AboutSection.astro';
 import Footer from '@components/scafold/Footer.astro';
 
-const isBossServer = import.meta.env.BOSS_SERVER === true;
+const isEnabled = (value: unknown) => value === true || value === 'true';
 
-const disableEverything = import.meta.env.VITE_DISABLE_EVERYTHING === true;
+const isBossServer = isEnabled(import.meta.env.BOSS_SERVER);
+
+const disableEverything = isEnabled(import.meta.env.VITE_DISABLE_EVERYTHING);
 
 // Redirect strait to /check or /check/:url if running as self-hosted instance
 if (!isBossServer) {

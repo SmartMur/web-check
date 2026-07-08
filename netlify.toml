@@ -12,7 +12,7 @@
   # Build configuration env vars (uncomment if you want to conigure these)
   # CI="false" # Set CI to false, to prevent warnings from exiting the build
   # CHROME_PATH='/usr/bin/chromium' # Path to Chromium binary
-  # NODE_VERSION = "16.16.0"  # Set the version of Node.js to use
+  NODE_VERSION = "22.12.0"  # Set the version of Node.js to use
 
   # Optional secrets and API keys:
   # Configure these in the Netlify dashboard environment-variable UI.
