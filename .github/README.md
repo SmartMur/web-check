@@ -926,6 +926,13 @@ Credit to the following users for contributing to Web-Check
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/SmartMur">
+                    <img src="https://avatars.githubusercontent.com/u/256185661?v=4" width="80;" alt="SmartMur"/>
+                    <br />
+                    <sub><b>Smartmur</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/tnga">
                     <img src="https://avatars.githubusercontent.com/u/12436411?v=4" width="80;" alt="tnga"/>
                     <br />
@@ -946,6 +953,8 @@ Credit to the following users for contributing to Web-Check
                     <sub><b>Mounir Samite</b></sub>
                 </a>
             </td>
+		</tr>
+		<tr>
             <td align="center">
                 <a href="https://github.com/ChrisCarini">
                     <img src="https://avatars.githubusercontent.com/u/6374067?v=4" width="80;" alt="ChrisCarini"/>
@@ -953,20 +962,11 @@ Credit to the following users for contributing to Web-Check
                     <sub><b>Chris Carini</b></sub>
                 </a>
             </td>
-		</tr>
-		<tr>
             <td align="center">
                 <a href="https://github.com/bolens">
                     <img src="https://avatars.githubusercontent.com/u/1218380?v=4" width="80;" alt="bolens"/>
                     <br />
                     <sub><b>Michael Bolens</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/SmartMur">
-                    <img src="https://avatars.githubusercontent.com/u/256185661?v=4" width="80;" alt="SmartMur"/>
-                    <br />
-                    <sub><b>Smartmur</b></sub>
                 </a>
             </td>
             <td align="center">
